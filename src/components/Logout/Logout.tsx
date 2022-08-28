@@ -5,9 +5,9 @@ import { resetUser, UserKey } from "../../redux/states/user"
 import { clearLocalStorage } from "../../utilities"
 
 function Logout() {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
-  const logOut = () => { 
+  const navigate = useNavigate();
+  const logOut = () => {
     clearLocalStorage(UserKey);
     dispatch(resetUser());
     navigate(`/${PrivateRoutes.PRIVATE}`, {replace: true});

@@ -5,11 +5,11 @@ import { PrivateRoutes, PublicRoutes, Roles } from './model';
 import { AuthGuard, RolGuard } from './guards';
 import { RoutersWitchNotFound } from './utilities';
 import store from './redux/store';
-import './App.css'
-import Logout from '../.history/src/components/Logout/Logout_20220824010639';
 import { Dashboard } from './pages/Private';
+import { Logout } from './components';
 const Login = lazy(()=> import('./pages/Login/Login'))
 const Private = lazy(()=> import('./pages/Private/Private'))
+import './App.css';
 function App() {
   return (
     <div className="App">

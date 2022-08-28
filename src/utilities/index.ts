@@ -1,2 +1,2 @@
-export {default as RoutersWitchNotFound} from './RoutersWitchNotFound.utility';
+export { default as RoutersWitchNotFound } from './RoutersWitchNotFound.utility';
 export * from './localStorage.utility';
