@@ -10,7 +10,7 @@ function RoutersWitchNotFound({children}: Props) {
     return (
         <Routes>
             {children}
-            <Route path="*" element={<Navigate to = {PublicRoutes.PAG404}/>} />
+            <Route path="*" element={<Navigate to = {PublicRoutes.LOGIN}/>} />
         </Routes>
     );
 }
