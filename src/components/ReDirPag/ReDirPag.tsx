@@ -3,16 +3,18 @@ import { useNavigate } from "react-router-dom";
 import { PrivateRoutes } from "../../model";
 import { resetUser, UserKey } from "../../redux/states/user"
 import { clearLocalStorage } from "../../utilities"
-function Logout() {
+function ReDirPag() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const logOut = () => {
+  const reDir = () => {
     clearLocalStorage(UserKey);
     dispatch(resetUser());
     navigate(`/${PrivateRoutes.PRIVATE}`, {replace: true});
   }
   return (
-    <button onClick={logOut}>Logout</button>
+    <div>
+      <button onClick={reDir}>Home</button>
+    </div>
   )
 }
-export default Logout
+export default ReDirPag

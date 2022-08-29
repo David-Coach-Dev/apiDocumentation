@@ -1,1 +1,2 @@
-export { default as Logout } from './Logout/Logout';
+export * from './Logout';
+export * from './ReDirPag';

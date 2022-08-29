@@ -1,1 +1,1 @@
-export { default as Pag404 } from './Pag404';
+export { default as Pag404 } from './Pag404.tsx';
