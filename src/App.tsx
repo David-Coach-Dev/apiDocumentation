@@ -1,6 +1,6 @@
 import { Suspense, lazy } from 'react';
 import { Provider } from 'react-redux';
-import { BrowserRouter, HashRouter, Navigate, Route} from 'react-router-dom';
+import { BrowserRouter, Navigate, Route} from 'react-router-dom';
 import { PrivateRoutes, PublicRoutes, Roles } from './model';
 import { AuthGuard, RolGuard } from './guards';
 import { RoutersWitchNotFound } from './utilities';
@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <Suspense fallback={<>Charging...</>}>
         <Provider store={store}>
-          <HashRouter >
+          <BrowserRouter>
             <RoutersWitchNotFound>
               <Route path="/" element={<Navigate to = {PrivateRoutes.PRIVATE}/>} />
               <Route path={PublicRoutes.LOGIN} element={<Login />} />
@@ -26,7 +26,7 @@ function App() {
                 <Route path={PrivateRoutes.DASHBOARD} element={<Dashboard />} />
               </Route>
             </RoutersWitchNotFound>
-          </HashRouter>
+          </BrowserRouter>
         </Provider>
       </Suspense>
     </div>
