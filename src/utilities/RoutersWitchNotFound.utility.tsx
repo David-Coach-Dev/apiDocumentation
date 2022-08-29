@@ -4,7 +4,7 @@ import { Pag404 } from "../pages/Pag404";
 interface Props {
     children: JSX.Element[] | JSX.Element;
 }
-function RoutersWitchNotFound({ children }: Props) {
+function RoutersWitchNotFound({children}: Props) {
     return (
         <Routes>
             {children}

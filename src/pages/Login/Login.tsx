@@ -12,20 +12,19 @@ function Login() {
   useEffect(() => {
     clearLocalStorage(UserKey);
     dispatch(resetUser());
-    navigate(`/${PrivateRoutes.PRIVATE}`, {replace: true});
+    //navigate(`/${PrivateRoutes.PRIVATE}`, {replace: true});
   },[]);
   const login = async () => {
     try {
       const result = await getMor();
       dispatch(createUser({...result, rol: Roles.ADMIN}));
-      navigate(`/${PublicRoutes.LOGIN}`, {replace: true});
+      navigate(`/${PrivateRoutes.PRIVATE}`, {replace: true});
     } catch (error) {}
   };
   return (
     <div>
-      <h2>
-        <button onClick={login}>Login</button>
-      </h2>
+      <h2>Hola desde Login</h2>
+      <button onClick={login}>Login</button>
     </div>
   )
 }

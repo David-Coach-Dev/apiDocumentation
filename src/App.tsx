@@ -16,10 +16,11 @@ function App() {
       <Suspense fallback={<>Charging...</>}>
         <Provider store={store}>
           <BrowserRouter>
+            <Logout />
             <RoutersWitchNotFound>
-              <Route path="/" element={<Navigate to ={PrivateRoutes.PRIVATE} />} />
+              <Route path="/" element={<Navigate to = {PrivateRoutes.PRIVATE}/>} />
               <Route path={PublicRoutes.LOGIN} element={<Login />} />
-              <Route element={<AuthGuard privateValidation={true} />}>
+              <Route element={<AuthGuard privateValidation = { true } />}>
                 <Route path={`${PrivateRoutes.PRIVATE}/*`} element={<Private />} />
               </Route>
               <Route element={<RolGuard rol={Roles.ADMIN} />}>
@@ -27,7 +28,6 @@ function App() {
               </Route>
             </RoutersWitchNotFound>
           </BrowserRouter>
-          <Logout />
         </Provider>
       </Suspense>
     </div>

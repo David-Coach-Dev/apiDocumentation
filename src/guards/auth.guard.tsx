@@ -7,15 +7,7 @@ interface Props {
 }
 export const AuthGuard = ({privateValidation}: Props)=>{
     const userState = useSelector((store: AppStore) => store.user);
-    return userState.id ? (
-        privateValidation ?
-            (
-                <Outlet />
-            ) : (
-                <Navigate replace to={PrivateRoutes.PRIVATE} />
-            )
-        ) : (
-        <Navigate replace to={PublicRoutes.LOGIN} />
+    return userState.id ? (privateValidation ?(<Outlet />):(<Navigate replace to={PrivateRoutes.PRIVATE} />)):(<Navigate replace to={PublicRoutes.LOGIN} />
     );
 };
 export default AuthGuard;
