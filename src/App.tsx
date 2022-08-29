@@ -16,7 +16,6 @@ function App() {
       <Suspense fallback={<>Charging...</>}>
         <Provider store={store}>
           <BrowserRouter>
-            <Logout />
             <RoutersWitchNotFound>
               <Route path="/" element={<Navigate to = {PrivateRoutes.PRIVATE}/>} />
               <Route path={PublicRoutes.LOGIN} element={<Login />} />
