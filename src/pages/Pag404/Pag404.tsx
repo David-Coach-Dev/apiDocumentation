@@ -10,7 +10,7 @@ function Pag404() {
   const reDir= () => {
     clearLocalStorage(UserKey);
     dispatch(resetUser());
-    navigate(`/`, {replace: true});
+    navigate(`/${PrivateRoutes.PRIVATE}`, { replace: true });
   }
   return (
     <div>

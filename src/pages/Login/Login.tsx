@@ -17,7 +17,7 @@ function Login() {
   const login = async () => {
     try {
       const result = await getMor();
-      dispatch(createUser({...result, rol: Roles.ADMIN}));
+      dispatch(createUser({...result, rol: Roles.USER}));
       navigate(`/${PrivateRoutes.PRIVATE}`, {replace: true});
     } catch (error) {}
   };
