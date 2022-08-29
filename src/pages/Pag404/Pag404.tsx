@@ -5,7 +5,6 @@ function Pag404() {
       <h2>Pag Not Found Error 404.</h2>
       <ReDirPag />
     </div>
-
   )
 }
 export default Pag404
