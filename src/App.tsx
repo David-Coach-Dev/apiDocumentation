@@ -22,7 +22,7 @@ function App() {
                 <Route path={`${PrivateRoutes.PRIVATE}/*`} element={<Private />} />
               </Route>
               <Route element={<RolGuard rol={Roles.ADMIN} />}>
-                <Route path={PrivateRoutes.DASHBOARD} element={<Private />} />
+                <Route path={PrivateRoutes.DASHBOARD} element={<Dashboard />} />
               </Route>
             </RoutersWitchNotFound>
           </BrowserRouter>
